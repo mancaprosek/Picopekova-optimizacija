@@ -1,106 +1,114 @@
+
 <!DOCTYPE html>
-<html lang="sl-SI">
-    <head>
-        <meta charset="utf8">
-        <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" href="style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@300&display=swap" rel="stylesheet">
-        <link rel="shortcut icon" href="favicon.ico">
-        <title>Spletna stran</title>
-    </head>
-    <body>
-        <h1>Osnove izdelave spletne strani</h1>
+<html>
+  <head>
+    <title>Spletno gradivo z orodjem Remark</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
 
-        <div class="razdelek">
-            <h2>Priprava spletne strani</h2>
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .remark-slide-content { background-size: contain; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
 
-            <p>Za pripravo spletne strani je dobro poznati osnove</p>
-            <ul>
-                <li>jezika HTML,</li>
-                <li>jezika CSS,</li>
-                <li>jezika JavaScript.</li>
-            </ul>
+layout: true
+background-image: url(background.jpg)
+background-position: center
+background-repeat: no-repeat
+<br>
+<br>
+<br>
 
-            <p>
-                Gradiva in vodičev je na spletu zelo veliko.
-                Za kratko osvežitev si lahko ogledate posnetke v YouTube kanalu <a href="https://www.youtube.com/playlist?list=PLo3w8EB99pqLEopnunz-dOOBJ8t-Wgt2g" target="_blank">Web Demystified</a>.
-                Bolj pregleden in podroben je vodič <a href="https://developer.mozilla.org/en-US/docs/Learn">MDN Web Docs</a>.
-            </p>
+---
 
-            <p>
-                Pri pripravi datotek si lahko pomagamo z urejevalnikom <a href="https://code.visualstudio.com/docs/languages/html">Visual Studio Code</a>.
-                Za predogled nastajajoče spletne strani uporabimo paket <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">Live Server</a> ali <a href="https://marketplace.visualstudio.com/items?itemName=tht13.html-preview-vscode">HTML Preview</a>.
-            </p>
-        </div>
+class: center, middle
 
-        <div class="razdelek">
-            <h2>Objava spletne strani</h2>
+# Spletno gradivo z orodjem Remark
 
-            <p>
-                Spletno stran lahko objavimo s pomočjo različnih ponudnikov spletnega gostovanja.
-                Če imamo kodo shranjeno v <a href="https://github.com/">GitHub</a> repozitoriju, lahko to enostavno uredimo s storitvijo <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site">GitHub Pages</a>.
-            </p>
-            <p>Ta spletna stran je objavljena na naslovu <a href="https://jagrdemo.github.io/spletna-stran/">https://jagrdemo.github.io/spletna-stran/</a>.</p>
-        </div>
+???
+Nekaj opomb.
 
-        <div class="razdelek">
-            <h2>Vključevanje skript</h2>
-      
-            <p>
-              Za dodajanje interaktivnih elementov na spletno stran se uporablja programski jezik JavaScript.
-              Kodo, napisano v tem jeziku, vključujemo z značko <code>&lt;script&gt;</code>.
-            </p>
+---
 
-            <p>
-                Na ta način lahko na spletno stran recimo dodamo "vljuden" gumb.
-            </p>
-            <button onclick="klik()">Klikni me</button>
-            <label id="klik-na-gumb"></label>
-            
+name: remark
+# Remark
 
-            <p>
-                Z uporabo zunanje skriptne datoteke <a href="http://docs.mathjax.org/en/latest/web/configuration.html">MathJax</a>
-                lahko v besedilu uporabljamo tudi $\LaTeX$
-                in zapišemo kakšno zanimivo formulo:
-            </p>
-            <p>$$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}.$$</p>
-        </div>
+<br>
 
-        <div class="razdelek">
+Orodje Remark lahko uporabimo za prevedbo zapiskov (pripravljenih v Markdownu) v spletno predstavitev.
 
-            <h2>Vključevanje zunanjih vsebin</h2>
+Več o možnostih, ki jih orodje ponuja, lahko preberemo v [modelni predstavitvi](https://remarkjs.com/) ali na
+[projektni strani](https://github.com/gnab/remark) z [natančnejšo dokumentacijo](https://github.com/gnab/remark/wiki).
 
-            <p>
-                Na spletno stran lahko vključimo tudi vsebine, ki se nahajajo na drugih spletnih naslovih.
-                To omogoča značka <code>&lt;iframe&gt;</code>
-                Primer je vključitev ankete, pripravljene s pomočjo <a href=https://docs.google.com/forms>Google obrazcev</a>.
-            </p>
+---
 
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScwCQzkme86T8AJhv8a32xUosfo1dx5hhAu16L9f3fo6qGzQw/viewform?embedded=true" width="900" height="800" frameborder="0" marginheight="0" marginwidth="0">Nalaganje …</iframe>
-        </div>
+# Navodila
 
-        <footer>
-            <p>Spletna stran je bila pripravljena v okviru predavanj pri predmetu Programska oprema pri pouku (FMF, UNI-LJ) aprila 2023.</p>
-            <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
-        </footer>
+<br>
 
-        <script src="script.js"></script>
+- Uporabite gradivo, ki ste ga pripravili s pomočjo Markdowna.
+--
 
-        <script>
-            MathJax = {
-              tex: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']]
-              },
-              svg: {
-                fontCache: 'global'
-              }
-            };
-        </script>
-        <script type="text/javascript" id="MathJax-script" async
-              src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
-        </script>
+- Segmentirajte besedilo in ga smiselno razporedite na več strani.
+--
 
-    </body>
+- Vsebinsko dopolnite in zaključite gradivo.
+--
+
+- Objavite gradivo kot spletno stran.
+
+---
+
+# Namigi
+
+<br>
+
+- Pomagajte si z dokumentacijo za [remark](#remark).
+- Znotraj besedila v Markdownu lahko uporabljate `html` (<code>html</code>).
+- Gradivo lahko polepšate z uporabo `css` (na primer slikovno ozadje, spremembe barv naslovov, ...).
+- Poslužujete se lahko tudi jezika `javascript` in dodate $\LaTeX$ formule ali kak drug interkativen element.
+
+<center>
+  <button onclick="klik()">Bomo zmogli?</button> <label id="na-klik"></label>
+</center>
+
+???
+Bomo bomo.
+
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+    <script>
+      function klik() {
+        document.getElementById("na-klik").innerHTML = "Bomo ja!"
+      }
+    </script>
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+  </body>
 </html>
