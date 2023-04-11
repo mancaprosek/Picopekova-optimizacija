@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -21,23 +20,13 @@
   <body>
     <textarea id="source">
 
-layout: true
-background-image: url(background.jpg)
-background-position: center
-background-repeat: no-repeat
-<br>
-<br>
-<br>
-
----
-
 class: center, middle
 
-# Picopekova optimizacija
+# <span style="color: rgb(214, 175, 91)">PICOPEKOVA OPTIMIZACIJA</span>
 
 ---
 
-# Linearno programiranje
+# <span style="color: rgb(214, 175, 91)">Linearno programiranje</span>
 
 <br>
 
@@ -48,7 +37,7 @@ proizvodov, ki jih proizvaja podjetje.
 
 ---
 
-# Slovar izrazov
+# <span style="color: rgb(214, 175, 91)">Slovar izrazov</span>
 
 * **Optimizacija**: maksimiziranje ali minimiziranje funkcije ob upoštevanju omejitev
 * **Namenska ali ciljna funkcija**: funkcija, ki jo je treba maksimizirati ali minimizirati
@@ -58,7 +47,7 @@ proizvodov, ki jih proizvaja podjetje.
 
 ---
 
-# Naš primer
+# <span style="color: rgb(148, 147, 143)">Naš primer</span>
 
 Imamo picerijo, ki pripravlja mini pice in pice calzone. Za izdelavo vsake od njih potrebujejo
 dva različna prispevka: delovni čas priprave pice in čas peke. 
@@ -70,7 +59,7 @@ cenah, in sicer mini pice po $P_1 = 5$€ in pica calzone po $P_2 = 7$€.
 **Vprašanje:** Kakšna je optimalna kombinacija mini pic in pic calzone ($X_1$ in $X_2$), ki jih mora proizvajati picerija?
 
 ---
-# Namenska funkcija
+# <span style="color: rgb(214, 175, 91)">Namenska funkcija</span>
 
 Namenska funkcija je funkcija izbirnih spremenljivk, ki jih želimo maksimizirati. Pri
 problemu linearnega programiranja je namenska funkcija linearna glede na izbirne spremenljivke.
@@ -82,7 +71,7 @@ torej zapišemo kot:
 > $R(X_1, X_2) = P_1 X_1 + P_2 X_2$.
 
 ---
-# Naloga 1
+## <span style="color: rgb(149, 196, 188)">Naloga 1</span>
 
 Poustvarite preglednico, ki je na sliki. Polja obarvana z rumeno barvo so vnaprej podane
 vrednosti, polja obarvana z oranžno pa so tista, ki jih je potrebno izračunati. V tem primeru
@@ -94,7 +83,7 @@ jih prodamo 15.
 Namig: Izraz v celici G4 lahko izračunate s funkcijo *SUMPRODUCT*.
 
 ---
-# Nivojnice namenske funkcije
+# <span style="color: rgb(214, 175, 91)">Nivojnice namenske funkcije</span>
 
 Nivojnico namenske funkcije dobimo, če funkcijo enačimo s konstanto. Torej 
 so nivojnice namenske funkcije krivulje, na katerih je vrednost funkcije enaka.
@@ -103,7 +92,7 @@ Naj bo $k$ poljubna konstanta. Potem so nivojnice prihodkov picerije podane z
 enačbo $R(X_1, X_2) = P_1 X_1 + P_2 X_2 = k$.
 
 ---
-## Naloga 2
+## <span style="color: rgb(149, 196, 188)">Naloga 2</span>
 
 Spremenite preglednico, ki ste jo pripravili v prejšnjem koraku, in vanjo
 vključite dve vrednosti za $k$ (izberemo si vrednosti $k_1 = 10$ in $k_2 = 20$)
@@ -115,7 +104,7 @@ na nivojnici $k_2$.
 <img src="slika2.png" alt="Slika2" width=500>
 
 ---
-## Naloga 3
+## <span style="color: rgb(149, 196, 188)">Naloga 3</span>
 Naredite graf nivojnic iz prejšnjega koraka z uporabo korelacijskega diagrama XY.
 (Če spreminjamo vrednost konstante, se nivojnica premakne.)
 <img src="Picture3.png" alt="Slika3" width=500>
@@ -130,7 +119,7 @@ Desni graf prikazuje nivojnici za isti konstanti, vendar z obrnjenimi cenami.
 <img src="Picture4.png" alt="Slika4" width=300><img src="Picture5.png" alt="Slika5" width=322>
 
 ---
-# Množica dopustnih rešitev
+# <span style="color: rgb(214, 175, 91)">Množica dopustnih rešitev</span>
 
 Množica dopustnih rešitev je množica možnih vrednosti za $X_1$ in $X_2$, 
 ki jih predstavimo z enačbami in neenačbami. 
@@ -157,7 +146,7 @@ Nenegativnost števila pic nam da omejitve: $X_1 \ge 0$ in $X_2 \ge 0$.
 
 <br>
 
-### Opomba
+### <span style="color: rgb(148, 147, 143)">Opomba</span>
 Zapis z indeksom je nameren. Pri reševanju problema linearnega programiranja
 kot iskanja optimalnega števila proizvodnje dveh dobrin je $a\_{11}$ število
 vira 1, ki se uporabi za proizvodnjo vsakega kosa blaga 1, $a\_{12}$ pa je
@@ -165,7 +154,7 @@ vira 1, ki se uporabi za proizvodnjo vsakega kosa blaga 1, $a\_{12}$ pa je
 je skupna količina razpoložljivega vira 1.
 
 ---
-# Naloga 4
+## <span style="color: rgb(149, 196, 188)">Naloga 4</span>
 
 Zapišite linearno neenakost, ki predstavlja omejitev časa pečenja pic.
 Neenakost zapišite v obliki $a\_{21} X\_1 + a\_{22} X\_2 \le C\_2$, kjer $C\_2$
@@ -173,7 +162,7 @@ predstavlja celoten čas, ko je pečica na voljo, $a\_{21}$ čas peke mini
 pice in $a\_{22}$ čas peke calzone pice.
 
 ---
-# Naloga 5
+## <span style="color: rgb(149, 196, 188)">Naloga 5</span>
 
 Spremenite preglednico iz naloge 2, da bo videti kot je prikazano na sliki.
 V polji B17 in B18 vnesite logične stavke, ki bodo vrnili "izvedljivo",
@@ -184,7 +173,7 @@ Pri tem upoštevajte omejitve nenegativnosti.
 <img src="slika6.png" alt="Slika6" width=500>
 
 ---
-# Naloga 6
+## <span style="color: rgb(149, 196, 188)">Naloga 6</span>
 
 Spremenite preglednico iz naloge 6, da bo videti tako kot na sliki.
 Za izbrano
@@ -195,7 +184,7 @@ priprave, v poljih D pa neenakost za čas peke pice.
 <img src="slika7.png" alt="Slika7" width=500>
 
 ---
-# Naloga 7
+## <span style="color: rgb(149, 196, 188)">Naloga 7</span>
 Za vsako omejitev neenakosti (čas priprave pic, čas peke in nenegativnostne omejitve)
 narišite graf enačbe tj. znak $\le$ nadomestite z znakom $=$. Z upoštevanjem vseh
 omejitev neenakosti in nenegativnosti v splošnem primeru dobimo polieder.
@@ -214,6 +203,17 @@ Oglišča izvedljivega območja so:
 * C: (48,0)
 * D: (0,0)
 
+---
+# <span style="color: rgb(214, 175, 91)">Odgovor na vprašanje</span>
+
+**Vprašanje naloge:**
+
+Kakšna je optimalna kombinacija mini pic in pic calzone ($X_1$ in $X_2$), ki jih mora proizvajati picerija?
+
+**Odgovor na vprašanje:**
+
+<button onclick="klik()">Klikni za odgovor</button> <label id="na-klik"></label>
+  
 
 
     </textarea>
@@ -224,7 +224,7 @@ Oglišča izvedljivega območja so:
     </script>
     <script>
       function klik() {
-        document.getElementById("na-klik").innerHTML = "Bomo ja!"
+        document.getElementById("na-klik").innerHTML = "MANCA ODGOVOR NAPIŠI!"
       }
     </script>
     <script>
