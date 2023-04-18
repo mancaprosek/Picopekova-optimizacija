@@ -201,7 +201,7 @@ pice in $a_{22}$ čas peke calzone pice.</div>
 <br>
 
 
-<button class="gumb" onclick="klik()">Klikni za rešitev</button> <br> <label id="naloga-4"></label>
+<button class="gumb" onclick="klik_4()">Klikni za rešitev</button> <br> <label id="naloga-4"></label>
 
 ---
 ## <span style="color: rgb(149, 196, 188)">Naloga 5</span>
@@ -240,7 +240,7 @@ so oglišča označena z A, B, C in D.</div>
 <img src="Picture8.png" alt="Slika8" width=400>
 
 
-<button class="gumb" onclick="klik()">Klikni za koordinate oglišč</button> <br> <label id="naloga-7"></label>
+<button class="gumb" onclick="klik_7()">Klikni za koordinate oglišč</button> <br> <label id="naloga-7"></label>
  
 
 
@@ -251,8 +251,10 @@ so oglišča označena z A, B, C in D.</div>
       var slideshow = remark.create();
     </script>
     <script>
-      function klik() {
+      function klik_4() {
         document.getElementById("naloga-4").innerHTML = '<br><div class="odgovor">Linearna neenakost za omejitev časa pečenja pic je: 4X_1 + 6X_2 \le 400.</div>';
+        }
+      function klik_7() {
         document.getElementById("naloga-7").innerHTML = '<br><div class="odgovor">Oglišča izvedljivega območja so: <ul><li>A: (0,66.67)</li><li>B: (13.33, 57.78)</li><li>C: (48,0)</li><li>D: (0,0)</li></ul></div>';
       }
     </script>
