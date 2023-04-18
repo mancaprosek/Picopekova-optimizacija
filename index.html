@@ -1,3 +1,7 @@
+<!-- Živjo! V vrstici 255 sem želela za prvi gumb, da vrne stavek in v stavku matematično formulo za neenakost, 
+  vendar nisem uspela najti rešitve, kako vključiti matemarično formulo v html v javascriptu. Ničesar, kar poznam 
+  in kar sem najdla na internetu mi ni zaznalo :/. Ideje so dobrodošle :). -->
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -13,6 +17,29 @@
         font-family: 'Yanone Kaffeesatz';
         font-weight: normal;
       }
+      .okvir { background-color:rgb(243, 231, 183);
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 20px;
+        padding-right: 10px;
+        border-radius: 25px;
+        margin: 10px;
+      }
+      .gumb { background-color:rgb(159, 197, 191);
+        border-radius: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        padding-top: 5px;
+        padding-right: 10px;
+        margin-left: 20px;
+      }
+      .odgovor { background-color:rgb(207, 228, 225);
+        border-radius: 25px;
+        padding-bottom: 5pt;
+        padding-left: 10pt;
+        padding-top: 5pt;
+        padding-right: 5pt;
+      }
       .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
       .remark-slide-content { background-size: contain; }
     </style>
@@ -20,7 +47,11 @@
   <body>
     <textarea id="source">
 
-class: center, middle
+class: left, middle
+
+background-image: url(chef.webp)
+background-position: right
+background-repeat: no-repeat
 
 # <span style="color: rgb(214, 175, 91)">PICOPEKOVA OPTIMIZACIJA</span>
 
@@ -40,9 +71,13 @@ proizvodov, ki jih proizvaja podjetje.
 # <span style="color: rgb(214, 175, 91)">Slovar izrazov</span>
 
 * **Optimizacija**: maksimiziranje ali minimiziranje funkcije ob upoštevanju omejitev
+
 * **Namenska ali ciljna funkcija**: funkcija, ki jo je treba maksimizirati ali minimizirati
+
 * **Izbirne spremenljivke**: spremenljivke, katerih vrednost je treba določiti tako, da bo namenska funkcija maksimizirana ali minimizirana
+
 * **Parametri**: spremenljivke, katerih vrednost je dana oziroma določena pri iskanju optimalne rešitve določenega problema
+
 * **Množica omejitev**: množica vrednosti, pri katerih izbirne spremenljivke izpolnjujejo vse omejitve problema
 
 ---
@@ -55,6 +90,8 @@ dva različna prispevka: delovni čas priprave pice in čas peke.
 Na voljo je omejena količina delovnega časa, ki ga označimo z $C_1$, in omejena količina časa peke, označena z $C_2$.
 Predpostavimo, da so sestavine mini pic in pice calzone enake. Prodajajo pa se po različnih
 cenah, in sicer mini pice po $P_1 = 5$€ in pica calzone po $P_2 = 7$€.
+
+--
 
 **Vprašanje:** Kakšna je optimalna kombinacija mini pic in pic calzone ($X_1$ in $X_2$), ki jih mora proizvajati picerija?
 
@@ -73,10 +110,10 @@ torej zapišemo kot:
 ---
 ## <span style="color: rgb(149, 196, 188)">Naloga 1</span>
 
-Poustvarite preglednico, ki je na sliki. Polja obarvana z rumeno barvo so vnaprej podane
+<div class="okvir">Poustvarite preglednico, ki je na sliki. Polja obarvana z rumeno barvo so vnaprej podane
 vrednosti, polja obarvana z oranžno pa so tista, ki jih je potrebno izračunati. V tem primeru
 računamo prihodek picerije, če mini pice stanejo 5€ in jih prodamo 10, calzone pa stanejo 7€ in
-jih prodamo 15.
+jih prodamo 15.</div>
 
 <img src="slika1.png" alt="Slika1" width=600>
 
@@ -94,19 +131,19 @@ enačbo $R(X_1, X_2) = P_1 X_1 + P_2 X_2 = k$.
 ---
 ## <span style="color: rgb(149, 196, 188)">Naloga 2</span>
 
-Spremenite preglednico, ki ste jo pripravili v prejšnjem koraku, in vanjo
+<div class="okvir">Spremenite preglednico, ki ste jo pripravili v prejšnjem koraku, in vanjo
 vključite dve vrednosti za $k$ (izberemo si vrednosti $k_1 = 10$ in $k_2 = 20$)
 ter vrednosti za $X_1$ od 0 do 10 (v stolpcu B). V polja C12 do C22 vnesite
 tako formulo, da bo izračunala vrednost $X_2$ na nivojnici $k_1$,
 v poljih D12 do D22 pa naj enaka formula izračuna vrednost $X_2$
-na nivojnici $k_2$.
+na nivojnici $k_2$.</div>
 
 <img src="slika2.png" alt="Slika2" width=500>
 
 ---
 ## <span style="color: rgb(149, 196, 188)">Naloga 3</span>
-Naredite graf nivojnic iz prejšnjega koraka z uporabo korelacijskega diagrama XY.
-(Če spreminjamo vrednost konstante, se nivojnica premakne.)
+<div class="okvir">Naredite graf nivojnic iz prejšnjega koraka z uporabo korelacijskega diagrama XY.
+(Če spreminjamo vrednost konstante, se nivojnica premakne.)</div>
 <img src="Picture3.png" alt="Slika3" width=500>
 
 ---
@@ -156,64 +193,55 @@ je skupna količina razpoložljivega vira 1.
 ---
 ## <span style="color: rgb(149, 196, 188)">Naloga 4</span>
 
-Zapišite linearno neenakost, ki predstavlja omejitev časa pečenja pic.
-Neenakost zapišite v obliki $a\_{21} X\_1 + a\_{22} X\_2 \le C\_2$, kjer $C\_2$
-predstavlja celoten čas, ko je pečica na voljo, $a\_{21}$ čas peke mini
-pice in $a\_{22}$ čas peke calzone pice.
+<div class="okvir">Zapišite linearno neenakost, ki predstavlja omejitev časa pečenja pic.
+Neenakost zapišite v obliki $a_{21} X_1 + a_{22} X_2 \le C_2$, kjer $C_2$
+predstavlja celoten čas, ko je pečica na voljo, $a_{21}$ čas peke mini
+pice in $a_{22}$ čas peke calzone pice.</div>
+
+<br>
+
+
+<button class="gumb" onclick="klik()">Klikni za rešitev</button> <br> <label id="naloga-4"></label>
 
 ---
 ## <span style="color: rgb(149, 196, 188)">Naloga 5</span>
 
-Spremenite preglednico iz naloge 2, da bo videti kot je prikazano na sliki.
+<div class="okvir">Spremenite preglednico iz naloge 2, da bo videti kot je prikazano na sliki.
 V polji B17 in B18 vnesite logične stavke, ki bodo vrnili "izvedljivo",
 če sta neenakosti za čas priprave in čas peke pic izpoljneni za vrednosti 
 $X_1$ in $X_2$ iz polj B9 in C9, sicer pa naj vrnejo "neizvedljivo".
-Pri tem upoštevajte omejitve nenegativnosti.
+Pri tem upoštevajte omejitve nenegativnosti.</div>
 
 <img src="slika6.png" alt="Slika6" width=500>
 
 ---
 ## <span style="color: rgb(149, 196, 188)">Naloga 6</span>
 
-Spremenite preglednico iz naloge 6, da bo videti tako kot na sliki.
-Za izbrano
-vrednost $X_1$ (podano v polju B) izračunajte maksimalno možno vrednost $X_2$
+<div class="okvir">Spremenite preglednico iz naloge 6, da bo videti tako kot na sliki.
+Za izbrano vrednost $X_1$ (podano v polju B) izračunajte maksimalno možno vrednost $X_2$
 glede na omejitveno neenakost. V poljih C upoštevajte neenakost za čas
-priprave, v poljih D pa neenakost za čas peke pice.
+priprave, v poljih D pa neenakost za čas peke pice.</div>
 
 <img src="slika7.png" alt="Slika7" width=500>
 
 ---
 ## <span style="color: rgb(149, 196, 188)">Naloga 7</span>
-Za vsako omejitev neenakosti (čas priprave pic, čas peke in nenegativnostne omejitve)
+<div class="okvir">Za vsako omejitev neenakosti (čas priprave pic, čas peke in nenegativnostne omejitve)
 narišite graf enačbe tj. znak $\le$ nadomestite z znakom $=$. Z upoštevanjem vseh
-omejitev neenakosti in nenegativnosti v splošnem primeru dobimo polieder.
+omejitev neenakosti in nenegativnosti v splošnem primeru dobimo polieder.</div>
 
-V našem primeru imamo samo dva produkta $X_1$ in $X_2$, zato dobimo za rešitev kar
+
+<div class="okvir">V našem primeru imamo samo dva produkta $X_1$ in $X_2$, zato dobimo za rešitev kar
 lik v ravnini. Določite koordinate vseh vrhov oziroma ekstremnih možnosti na tem liku
 (tj. oglišča tega lika). Svoj odgovor primerjajte s sliko na naslednji prosojnici, kjer
-so oglišča označena z A, B, C in D.
+so oglišča označena z A, B, C in D.</div>
 
 ---
 <img src="Picture8.png" alt="Slika8" width=400>
 
-Oglišča izvedljivega območja so:
-* A: (0,66.67)
-* B: (13.33, 57.78)
-* C: (48,0)
-* D: (0,0)
 
----
-# <span style="color: rgb(214, 175, 91)">Odgovor na vprašanje</span>
-
-**Vprašanje naloge:**
-
-Kakšna je optimalna kombinacija mini pic in pic calzone ($X_1$ in $X_2$), ki jih mora proizvajati picerija?
-
-**Odgovor na vprašanje:**
-
-<button onclick="klik()">Klikni za odgovor</button> <label id="na-klik"></label>
-  
+<button class="gumb" onclick="klik()">Klikni za koordinate oglišč</button> <br> <label id="naloga-7"></label>
+ 
 
 
     </textarea>
@@ -224,7 +252,8 @@ Kakšna je optimalna kombinacija mini pic in pic calzone ($X_1$ in $X_2$), ki ji
     </script>
     <script>
       function klik() {
-        document.getElementById("na-klik").innerHTML = "MANCA ODGOVOR NAPIŠI!"
+        document.getElementById("naloga-4").innerHTML = '<br><div class="odgovor">Linearna neenakost za omejitev časa pečenja pic je: 4X_1 + 6X_2 \le 400.</div>';
+        document.getElementById("naloga-7").innerHTML = '<br><div class="odgovor">Oglišča izvedljivega območja so: <ul><li>A: (0,66.67)</li><li>B: (13.33, 57.78)</li><li>C: (48,0)</li><li>D: (0,0)</li></ul></div>';
       }
     </script>
     <script>
